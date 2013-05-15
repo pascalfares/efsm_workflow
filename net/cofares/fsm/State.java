@@ -31,5 +31,10 @@ public abstract class State {
      * @param ev lévenement recut
      * @return prochain état
      */
-    abstract State eval(Event ev);
+    State eval(Event ev) {
+        Action a = t.getAction(ev);
+        //Executer action a
+        //Si reussite changer d'état sinon anomalie?
+        return t.getNextState(ev);
+    }
 }

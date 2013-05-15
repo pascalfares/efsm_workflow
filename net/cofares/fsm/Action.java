@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.cofares.fsm;
 
 /**
@@ -15,7 +11,7 @@ package net.cofares.fsm;
  */
 class Action {
     /**
-     * Nom de l'action (c'est le nom de la méthode)
+     * Nom de l'action (c'est le nom de la méthode par exemple)
      */
     String id;
     

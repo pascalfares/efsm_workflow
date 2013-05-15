@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package net.cofares.fsm;
 
 /**
@@ -10,7 +7,7 @@ package net.cofares.fsm;
  */
 class Event {
     /**
-     * identifiant de l'évènement
+     * identifiant (nom) de l'évènement
      */
     String id;
     
