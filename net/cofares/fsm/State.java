@@ -1,14 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.cofares.fsm;
 
 /**
  *
  * @author pascalfares
  */
-public abstract class State {
+public class State {
     /**
      * id : la référence de l'activité (état)
      */
@@ -16,11 +12,11 @@ public abstract class State {
     /**
      * Action à executer en entrant
      */
-    abstract void entrant();
+    //abstract void entrant();
     /**
      * Action à executer en sortant
      */
-    abstract void sortant();
+    //abstract void sortant();
     /**
      * Table des transitions: état courant -> evenement/action -> prochain état
      */
@@ -36,5 +32,10 @@ public abstract class State {
         //Executer action a
         //Si reussite changer d'état sinon anomalie?
         return t.getNextState(ev);
+    }
+    
+    public void addTransition(Event ev, Action a, State ns) {
+        t.addAction(ev, a);
+        t.addTransition(ev, ns);
     }
 }

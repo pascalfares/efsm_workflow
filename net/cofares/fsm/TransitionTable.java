@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.cofares.fsm;
 
 import java.util.HashMap;
@@ -11,7 +7,7 @@ import java.util.HashMap;
  * de l'état)
  * @author pascalfares
  */
-class TransitionTable {
+public class TransitionTable {
     /**
      * Table des actions e/a
      */
@@ -21,17 +17,34 @@ class TransitionTable {
      */
     HashMap<Event, State> nextStates;
     
+    /**
+     * @param e
+     * @return 
+     */
     public Action getAction(Event e) {
         return actions.get(e);
     }
+    /**
+     * 
+     * @param e
+     * @param a 
+     */
     public void addAction(Event e, Action a) {
         actions.put(e, a);
     }
-    
+    /**
+     * 
+     * @param e
+     * @return 
+     */
     public State getNextState(Event e) {
         return nextStates.get(e);
     }
-    
+    /**
+     * 
+     * @param e
+     * @param s 
+     */
     public void addTransition(Event e, State s) {
         nextStates.put(e,s);
     }
